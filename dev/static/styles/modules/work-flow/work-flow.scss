@@ -1,0 +1,47 @@
+.workflow {
+	display: flex;
+	flex-direction: column;
+	&__header {
+		margin-bottom: 6rem;
+		max-width: 75rem;
+	}
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+}
+
+.step {
+	max-width: calc((100% - 6rem) / 3);
+	padding: 7rem 3.5rem;
+	border: 1px solid rgba(255,255,255,0.2);
+	& > * {
+		margin-bottom: 1rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	@media screen and (max-width:$tablet-size) {
+		padding: 2rem 2.5rem;
+	}
+	@media screen and (max-width:$phablet-size) {
+		max-width: 100%;
+	}
+	&__number {
+		color: $primary;
+	}
+	&__descr {
+		color: $white;
+	}
+	&--active {
+		background-color: $primary;
+		border: 1px solid transparent;
+		transition: all linear .4s;
+		.step__number {
+			transition: all linear .4s;
+			color: $white;
+		}
+	}
+}

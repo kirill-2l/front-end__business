@@ -1,0 +1,67 @@
+.reviews {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	&__header {
+		margin-bottom: 12rem;
+		@media screen and (max-width:$phone-size) {
+			margin-bottom: 5rem;
+		}
+	}
+	&__body {
+		margin-bottom: 3rem;
+		@media screen and (max-width:$tablet-size) {
+			max-width: 70%;
+			text-align: center;
+		}
+	}
+	&__photo {
+		position: relative;
+		max-width: 30rem;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -10%;
+			left:0;
+			right:0;
+			margin-left:auto;
+			margin-right:auto;
+			background-image: url('../images/general/quotes.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 5.6rem;
+			height: 4.8rem;
+			fill: $primary;
+		}
+	}
+	&__img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	&__arrow {
+		width: 3.6rem;
+		height: 3.6rem;
+		z-index: 10;
+		&--next {
+			position: absolute;
+			top: 90%;
+			right: 10px;
+			@media screen and (max-width:$phone-size) {
+				top: 80%;
+			}
+		}
+		&--prev {
+			position: absolute;
+			top: 90%;
+			left: 10px;
+			@media screen and (max-width:$phone-size) {
+				top: 80%;
+			}
+		}
+		&-icon {
+			width: 1rem;
+			height: 0.7rem;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+mixin list (text,href)
+	li.nav__item
+		a(href=href).nav__link.link=text
+
+nav.nav
+	.nav__logo
+		a(href="/").nav__logo-link Lopper
+	.nav__menu-wrapper
+		ul.nav__menu
+			+list('Home','')
+			+list('Services','')
+			+list('Work','')
+			+list('About','')
+	.nav__phone
+		+icon('phone','nav__phone-icon')
+		span.nav__phone-text (01) 666 - 693 - 456
+	.nav__burger.burger
+		.burger-line.burger-line__top
+		.burger-line.burger-line__middle
+		.burger-line.burger-line__bottom

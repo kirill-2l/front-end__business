@@ -1,0 +1,97 @@
+.nav {
+	padding-top: 6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.5rem;
+	color: $white;
+	font-weight: 700;
+	@media screen and (max-width:$tablet-size-wide) {
+		padding-top: 2rem;
+	}
+	&__logo {
+		&-link {
+			color: $white;
+			font-size: 2.4rem;
+			font-weight: 800;
+			letter-spacing: 2px;
+		}
+	}
+
+	&__phone {
+		@media screen and (max-width: $tablet-size) {
+			display: none;
+		}
+		&-icon {
+			width: 1.8rem;
+			height: 2.9rem;
+			fill: $white;
+		}
+		&-text {
+			margin-left: 1.8rem;
+		}
+	}
+	&__menu {
+		display: flex;
+		line-height: 3.5rem;
+		& > * {
+			margin-right: 5.5rem;
+			&:last-child{margin-right: 0;}
+		}
+		@media screen and (max-width: $tablet-size) {
+			flex-direction: column;
+			margin-top: 10rem;
+			& > * {
+				margin-right: 0;
+			}
+		}
+
+		&-wrapper {
+			@media screen and (max-width: $tablet-size) {
+			position: fixed;
+			top: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+			width: 40%;
+			max-width: 40rem;
+			min-width: 30rem;
+			background-color: $secondary-300;
+			z-index: 5;
+			transform: translateX(100%);
+			transition: transform 0.5s ease-in;
+			&-active {
+				transform: translateX(0%);
+			}
+		}
+		}
+	}
+	&__item {
+		@media screen and (max-width: $tablet-size) {
+			padding: 5px 20px;
+			border-bottom: 1px solid $white;
+			opacity: 0;
+		}
+	}
+	&__link {
+		color: $white;
+	}
+	&__burger {
+		display: none;
+		@media screen and (max-width: $tablet-size) {
+			display: block;
+		}
+	}
+}
+
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}

@@ -1,0 +1,27 @@
+mixin service(title,descr)
+	.service__item
+		+icon('service','service__icon')
+		h6.service__title=title
+		.service__descr.text.text--small=descr
+
+section.section.section-services#services
+	.container
+		.services__header
+			p.title.title--small.primary What we can do?
+			h3 Our services
+		.services__list.service
+			.service__list
+				+service('Webdesign', 'Tincidunt lobortis feugiat vivamus at augue eget. Risus feugiat in ante metus dictum. Amet aliquam id diam maecenas.')
+				+service('Webdev', 'Tincidunt lobortis feugiat vivamus at augue eget. Risus feugiat in ante metus dictum. Amet aliquam id diam maecenas.')
+				+service('Marketing', 'Tincidunt lobortis feugiat vivamus at augue eget. Risus feugiat in ante metus dictum. Amet aliquam id diam maecenas.')
+				+service('Marketing', 'Tincidunt lobortis feugiat vivamus at augue eget. Risus feugiat in ante metus dictum. Amet aliquam id diam maecenas.')
+				+service('Webdesign', 'Tincidunt lobortis feugiat vivamus at augue eget. Risus feugiat in ante metus dictum. Amet aliquam id diam maecenas.')
+				+service('Webdev', 'Tincidunt lobortis feugiat vivamus at augue eget. Risus feugiat in ante metus dictum. Amet aliquam id diam maecenas.')
+		.services__quote.services-quote
+			.services-quote__wrapper
+				.services-quote__text.quote-text.quote-text__small “Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle.”
+				.services-quote__img--wrapper
+					img(src="static/images/general/man.png", alt="Andrew Slomka").services-quote__img
+				.services-quote__author
+					| <span class="primary text--regular-bold"> Andrew Slomka</span>
+					|  - Some Company
